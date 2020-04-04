@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.15)
 
 # set the project name
 project(showclip VERSION 1.0.1)
@@ -10,7 +10,7 @@ add_executable(showclip showclip.cc ../lsMisc/GetClipboardText.cpp ../lsMisc/UTF
 include_directories(.)
 
 # define
-add_definitions(-DUNICODE -D_UNICODE)
+add_definitions(-DUNICODE -D_UNICODE -DAPPVERSION="${PROJECT_VERSION}")
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 11)
