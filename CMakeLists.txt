@@ -4,7 +4,13 @@ cmake_minimum_required(VERSION 3.17)
 project(showclip VERSION 1.0.1)
 
 # add the executable
-add_executable(showclip showclip.cc)
+add_executable(showclip showclip.cc ../lsMisc/GetClipboardText.cpp ../lsMisc/UTF16toUTF8.cpp ../lsMisc/UrlEncode.cpp)
+
+# include dir
+include_directories(.)
+
+# define
+add_definitions(-DUNICODE -D_UNICODE)
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 11)
